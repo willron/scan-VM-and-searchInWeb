@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>内网虚拟机查询</title>
+    <style type="text/css">
+        [titleonline]
+            { color:lawngreen; }
+        [titleoffline]
+            { color:red; }
+        [titlekeyword]
+            { color:yellow }
+    </style>
+</head>
+<body>
+<div align="center" style="padding-top:20px">
+<form method='post'>
+{{form}}
+<input type="submit" value="ok" >
+</p>
+{% if FROMDB %}
+<table border="1" cellpadding="5">
+<tr>
+    <td align="center">KVM宿主机</td>
+    <td align="center">虚拟机名</td>
+    <td align="center">虚拟机IP</td>
+    <td align="center">虚拟机MAC</td>
+    <td align="center">虚拟机系统</td>
+    <td align="center">虚拟机状态</td>
+
+</tr>
+    {% for i in FROMDB %}
+<tr>
+    <td align="center">{{i.hostserverip}}</td>
+    <td align="center">{{i.name}}</td>
+    <td align="center">{{i.ip}}</td>
+    <td align="center">{{i.mac}}</td>
+    <td align="center">{{i.os}}</td>
+    <td align="center">
+        {% if i.vmstatus == 'online' %}
+            <h3 titleonline="online">{{i.vmstatus}}</h3>
+        {% else %}
+            <h3 titleoffline="offline">{{i.vmstatus}}</h3>
+        {% endif %}
+    </td>
+</tr>
+    {% endfor %}
+</table>
+{% endif %}
+</p>
+<h5>
+提示:输入KVM主机IP显示机内所有虚拟机.</br>
+可以自动识别输入的MAC地址,IP地址,系统(windows/linux)等.</br>
+</h5>
+</form>
+</div>
+</body>
+</html>

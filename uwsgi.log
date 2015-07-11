@@ -1,0 +1,909 @@
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:11:20 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xafcc10
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xafcc10 pid: 30531 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 30531, cores: 1)
+spawned uWSGI worker 2 (pid: 30542, cores: 1)
+spawned uWSGI worker 3 (pid: 30543, cores: 1)
+spawned uWSGI worker 4 (pid: 30544, cores: 1)
+No handlers could be found for logger "django.request"
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/core/handlers/wsgi.py", line 189, in __call__
+    response = self.get_response(request)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/core/handlers/base.py", line 218, in get_response
+    response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/core/handlers/base.py", line 261, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/views/debug.py", line 97, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/views/debug.py", line 384, in get_traceback_html
+    return t.render(c)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/template/debug.py", line 89, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/template/base.py", line 674, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/template/defaultfilters.py", line 774, in date
+    return format(value, arg)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/dateformat.py", line 345, in format
+    return df.format(format_string)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/dateformat.py", line 37, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/dateformat.py", line 270, in r
+    return self.format('D, j M Y H:i:s O')
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/dateformat.py", line 37, in format
+    pieces.append(force_text(getattr(self, piece)()))
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/encoding.py", line 92, in force_text
+    s = six.text_type(s)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/functional.py", line 141, in __text_cast
+    return func(*self.__args, **self.__kw)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/translation/__init__.py", line 84, in ugettext
+    return _trans.ugettext(message)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/translation/trans_real.py", line 327, in ugettext
+    return do_translate(message, 'ugettext')
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/translation/trans_real.py", line 304, in do_translate
+    _default = _default or translation(settings.LANGUAGE_CODE)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/translation/trans_real.py", line 206, in translation
+    _translations[language] = DjangoTranslation(language)
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/translation/trans_real.py", line 116, in __init__
+    self._add_installed_apps_translations()
+  File "/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/utils/translation/trans_real.py", line 164, in _add_installed_apps_translations
+    "The translation infrastructure cannot be initialized before the "
+django.core.exceptions.AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[pid: 30542|app: 0|req: 1/1] 127.0.0.1 () {34 vars in 484 bytes} [Mon Jun 29 18:12:27 2015] GET / => generated 0 bytes in 191 msecs (HTTP/1.0 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 30542|app: 0|req: 2/2] 127.0.0.1 () {34 vars in 496 bytes} [Mon Jun 29 18:15:14 2015] GET /search => generated 1911 bytes in 5 msecs (HTTP/1.0 404) 2 headers in 80 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:24:58 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x93fc20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x93fc20 pid: 30864 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 30864, cores: 1)
+spawned uWSGI worker 2 (pid: 30875, cores: 1)
+spawned uWSGI worker 3 (pid: 30876, cores: 1)
+spawned uWSGI worker 4 (pid: 30877, cores: 1)
+[pid: 30864|app: 0|req: 1/1] 192.168.0.221 () {34 vars in 494 bytes} [Mon Jun 29 18:25:11 2015] GET / => generated 518 bytes in 45 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 30875|app: 0|req: 1/2] 192.168.0.221 () {44 vars in 699 bytes} [Mon Jun 29 18:25:20 2015] POST / => generated 45 bytes in 667 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 30875|app: 0|req: 2/3] 127.0.0.1 () {34 vars in 484 bytes} [Mon Jun 29 18:28:59 2015] GET / => generated 518 bytes in 10 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 30875|app: 0|req: 3/4] 192.168.0.220 () {38 vars in 580 bytes} [Mon Jun 29 18:31:29 2015] GET / => generated 518 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 30876|app: 0|req: 1/5] 192.168.0.220 () {38 vars in 572 bytes} [Mon Jun 29 18:31:32 2015] GET /favicon.ico => generated 1930 bytes in 39 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 30875|app: 0|req: 4/6] 192.168.0.220 () {38 vars in 602 bytes} [Mon Jun 29 18:31:32 2015] GET /favicon.ico => generated 1930 bytes in 11 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:34:18 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2120c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x2120c20 pid: 30979 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 30979, cores: 1)
+spawned uWSGI worker 2 (pid: 30990, cores: 1)
+spawned uWSGI worker 3 (pid: 30991, cores: 1)
+spawned uWSGI worker 4 (pid: 30992, cores: 1)
+[pid: 30979|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:34:22 2015] GET / => generated 503 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 30990|app: 0|req: 1/2] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:34:23 2015] GET / => generated 503 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 30991|app: 0|req: 1/3] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:34:23 2015] GET / => generated 503 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:35:24 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1809c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1809c20 pid: 31023 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31023, cores: 1)
+spawned uWSGI worker 2 (pid: 31034, cores: 1)
+spawned uWSGI worker 3 (pid: 31035, cores: 1)
+spawned uWSGI worker 4 (pid: 31036, cores: 1)
+[pid: 31036|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:35:27 2015] GET / => generated 503 bytes in 21 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:39:20 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x193bc20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x193bc20 pid: 31087 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31087, cores: 1)
+spawned uWSGI worker 2 (pid: 31098, cores: 1)
+spawned uWSGI worker 3 (pid: 31099, cores: 1)
+spawned uWSGI worker 4 (pid: 31100, cores: 1)
+[pid: 31087|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:39:23 2015] GET / => generated 511 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31099|app: 0|req: 1/2] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:39:24 2015] GET / => generated 511 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31098|app: 0|req: 1/3] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:39:25 2015] GET / => generated 511 bytes in 21 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:42:29 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1df1c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1df1c20 pid: 31138 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31138, cores: 1)
+spawned uWSGI worker 2 (pid: 31149, cores: 1)
+spawned uWSGI worker 3 (pid: 31150, cores: 1)
+spawned uWSGI worker 4 (pid: 31151, cores: 1)
+[pid: 31138|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:42:34 2015] GET / => generated 412 bytes in 44 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:43:11 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1a0bc20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1a0bc20 pid: 31182 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31182, cores: 1)
+spawned uWSGI worker 2 (pid: 31193, cores: 1)
+spawned uWSGI worker 3 (pid: 31194, cores: 1)
+spawned uWSGI worker 4 (pid: 31195, cores: 1)
+[pid: 31182|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:43:14 2015] GET / => generated 98365 bytes in 295 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:44:02 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xe82c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xe82c20 pid: 31226 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31226, cores: 1)
+spawned uWSGI worker 2 (pid: 31237, cores: 1)
+spawned uWSGI worker 3 (pid: 31238, cores: 1)
+spawned uWSGI worker 4 (pid: 31239, cores: 1)
+[pid: 31226|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:44:04 2015] GET / => generated 96418 bytes in 289 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+[pid: 31237|app: 0|req: 1/2] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:44:05 2015] GET / => generated 96418 bytes in 296 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:49:43 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xc9dc20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xc9dc20 pid: 31278 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31278, cores: 1)
+spawned uWSGI worker 2 (pid: 31289, cores: 1)
+spawned uWSGI worker 3 (pid: 31290, cores: 1)
+spawned uWSGI worker 4 (pid: 31291, cores: 1)
+/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/forms/widgets.py:254: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value != '':
+
+[pid: 31278|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:49:47 2015] GET / => generated 535 bytes in 47 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 02:53:30 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2285c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2285c20 pid: 31340 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31340, cores: 1)
+spawned uWSGI worker 2 (pid: 31351, cores: 1)
+spawned uWSGI worker 3 (pid: 31352, cores: 1)
+spawned uWSGI worker 4 (pid: 31353, cores: 1)
+/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/forms/widgets.py:254: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value != '':
+
+[pid: 31340|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:53:33 2015] GET / => generated 539 bytes in 83 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/forms/widgets.py:254: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value != '':
+
+[pid: 31351|app: 0|req: 1/2] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:53:34 2015] GET / => generated 539 bytes in 48 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/forms/widgets.py:254: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value != '':
+
+[pid: 31352|app: 0|req: 1/3] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:53:35 2015] GET / => generated 539 bytes in 51 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31351|app: 0|req: 2/4] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:53:35 2015] GET / => generated 539 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31352|app: 0|req: 2/5] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 18:53:35 2015] GET / => generated 539 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:05:22 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x18f5c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x18f5c20 pid: 31452 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31452, cores: 1)
+spawned uWSGI worker 2 (pid: 31463, cores: 1)
+spawned uWSGI worker 3 (pid: 31464, cores: 1)
+spawned uWSGI worker 4 (pid: 31465, cores: 1)
+[pid: 31464|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:05:28 2015] GET / => generated 408 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31463|app: 0|req: 1/2] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:05:29 2015] GET / => generated 408 bytes in 19 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:08:19 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8077).
+bind(): Address already in use [core/socket.c line 766]
+/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/forms/widgets.py:254: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value != '':
+
+[pid: 31464|app: 0|req: 2/3] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:08:22 2015] GET / => generated 520 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/forms/widgets.py:254: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value != '':
+
+[pid: 31463|app: 0|req: 2/4] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:08:23 2015] GET / => generated 520 bytes in 3 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/forms/widgets.py:254: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value != '':
+
+[pid: 31465|app: 0|req: 1/5] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:08:23 2015] GET / => generated 520 bytes in 21 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31464|app: 0|req: 3/6] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:08:24 2015] GET / => generated 520 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31463|app: 0|req: 3/7] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:08:24 2015] GET / => generated 520 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31464|app: 0|req: 4/8] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:08:24 2015] GET / => generated 520 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31465|app: 0|req: 2/9] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:08:24 2015] GET / => generated 520 bytes in 4 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31464|app: 0|req: 5/10] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:09:08 2015] GET / => generated 520 bytes in 6 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:13:08 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1331c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1331c20 pid: 31533 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31533, cores: 1)
+spawned uWSGI worker 2 (pid: 31544, cores: 1)
+spawned uWSGI worker 3 (pid: 31545, cores: 1)
+spawned uWSGI worker 4 (pid: 31546, cores: 1)
+/usr/lib/python2.7/site-packages/Django-1.8.2-py2.7.egg/django/forms/widgets.py:254: UnicodeWarning: Unicode unequal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  if value != '':
+
+[pid: 31533|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:13:13 2015] GET / => generated 573 bytes in 48 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:18:29 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xacbc20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xacbc20 pid: 31594 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31594, cores: 1)
+spawned uWSGI worker 2 (pid: 31605, cores: 1)
+spawned uWSGI worker 3 (pid: 31606, cores: 1)
+spawned uWSGI worker 4 (pid: 31607, cores: 1)
+[pid: 31594|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:18:35 2015] GET / => generated 53341 bytes in 86 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:19:39 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1134c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1134c20 pid: 31639 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31639, cores: 1)
+spawned uWSGI worker 2 (pid: 31650, cores: 1)
+spawned uWSGI worker 3 (pid: 31651, cores: 1)
+spawned uWSGI worker 4 (pid: 31652, cores: 1)
+[pid: 31639|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:19:42 2015] GET / => generated 53250 bytes in 86 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+[pid: 31651|app: 0|req: 1/2] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:19:44 2015] GET / => generated 53250 bytes in 84 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+[pid: 31650|app: 0|req: 1/3] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:19:44 2015] GET / => generated 53250 bytes in 155 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+[pid: 31651|app: 0|req: 2/4] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:19:45 2015] GET / => generated 53250 bytes in 157 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+[pid: 31650|app: 0|req: 2/5] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:19:46 2015] GET / => generated 53250 bytes in 156 msecs (HTTP/1.1 500) 2 headers in 92 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:28:38 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1ec8c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1ec8c20 pid: 31699 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31699, cores: 1)
+spawned uWSGI worker 2 (pid: 31710, cores: 1)
+spawned uWSGI worker 3 (pid: 31711, cores: 1)
+spawned uWSGI worker 4 (pid: 31712, cores: 1)
+[pid: 31712|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:28:42 2015] GET / => generated 544 bytes in 49 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:29:18 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1f4cc20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1f4cc20 pid: 31744 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31744, cores: 1)
+spawned uWSGI worker 2 (pid: 31755, cores: 1)
+spawned uWSGI worker 3 (pid: 31756, cores: 1)
+spawned uWSGI worker 4 (pid: 31757, cores: 1)
+[pid: 31744|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:29:20 2015] GET / => generated 510 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:30:04 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1788c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1788c20 pid: 31791 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31791, cores: 1)
+spawned uWSGI worker 2 (pid: 31802, cores: 1)
+spawned uWSGI worker 3 (pid: 31803, cores: 1)
+spawned uWSGI worker 4 (pid: 31804, cores: 1)
+[pid: 31791|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:30:06 2015] GET / => generated 522 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31802|app: 0|req: 1/2] 192.168.0.220 () {44 vars in 732 bytes} [Mon Jun 29 19:31:19 2015] POST / => generated 45 bytes in 1232 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:33:22 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x84ec20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x84ec20 pid: 31855 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 31855, cores: 1)
+spawned uWSGI worker 2 (pid: 31866, cores: 1)
+spawned uWSGI worker 3 (pid: 31867, cores: 1)
+spawned uWSGI worker 4 (pid: 31868, cores: 1)
+[pid: 31855|app: 0|req: 1/1] 192.168.0.220 () {38 vars in 580 bytes} [Mon Jun 29 19:33:26 2015] GET / => generated 522 bytes in 20 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 31866|app: 0|req: 1/2] 192.168.0.220 () {44 vars in 732 bytes} [Mon Jun 29 19:33:28 2015] POST / => generated 58 bytes in 1286 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:37:39 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x22f4c20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x22f4c20 pid: 32486 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 32486, cores: 1)
+spawned uWSGI worker 2 (pid: 32497, cores: 1)
+spawned uWSGI worker 3 (pid: 32498, cores: 1)
+spawned uWSGI worker 4 (pid: 32499, cores: 1)
+[pid: 32497|app: 0|req: 1/1] 192.168.0.220 () {38 vars in 580 bytes} [Mon Jun 29 19:39:10 2015] GET / => generated 537 bytes in 45 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32499|app: 0|req: 1/2] 192.168.0.220 () {38 vars in 602 bytes} [Mon Jun 29 19:39:10 2015] GET /favicon.ico => generated 1930 bytes in 41 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 03:40:50 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x225ec20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x225ec20 pid: 32537 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 32537, cores: 1)
+spawned uWSGI worker 2 (pid: 32548, cores: 1)
+spawned uWSGI worker 3 (pid: 32549, cores: 1)
+spawned uWSGI worker 4 (pid: 32550, cores: 1)
+[pid: 32537|app: 0|req: 1/1] 192.168.0.220 () {40 vars in 611 bytes} [Mon Jun 29 19:40:56 2015] GET / => generated 550 bytes in 46 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32548|app: 0|req: 1/2] 192.168.0.220 () {44 vars in 732 bytes} [Mon Jun 29 19:41:03 2015] POST / => generated 58 bytes in 1388 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32548|app: 0|req: 2/3] 127.0.0.1 () {34 vars in 484 bytes} [Tue Jun 30 00:54:47 2015] GET / => generated 550 bytes in 14 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Can not ping 192.168.0.12
+[pid: 32549|app: 0|req: 1/4] 127.0.0.1 () {34 vars in 484 bytes} [Tue Jun 30 00:55:07 2015] GET / => generated 550 bytes in 21 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32550|app: 0|req: 1/5] 127.0.0.1 () {44 vars in 685 bytes} [Tue Jun 30 00:55:12 2015] POST / => generated 47 bytes in 676 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 32549|app: 0|req: 2/6] 127.0.0.1 () {34 vars in 484 bytes} [Tue Jun 30 01:02:10 2015] GET / => generated 550 bytes in 5 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+Can not ping 192.168.0.12
+[pid: 32550|app: 0|req: 2/7] 127.0.0.1 () {44 vars in 685 bytes} [Tue Jun 30 01:02:35 2015] POST / => generated 47 bytes in 629 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 09:03:19 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1d28d20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1d28d20 pid: 1257 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 1257, cores: 1)
+spawned uWSGI worker 2 (pid: 1268, cores: 1)
+spawned uWSGI worker 3 (pid: 1270, cores: 1)
+spawned uWSGI worker 4 (pid: 1271, cores: 1)
+[pid: 1271|app: 0|req: 1/1] 127.0.0.1 () {34 vars in 484 bytes} [Tue Jun 30 01:03:23 2015] GET / => generated 550 bytes in 22 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 1271|app: 0|req: 2/2] 127.0.0.1 () {44 vars in 685 bytes} [Tue Jun 30 01:03:30 2015] POST / => generated 49 bytes in 1244 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 1271|app: 0|req: 3/3] 127.0.0.1 () {44 vars in 685 bytes} [Tue Jun 30 01:03:39 2015] POST / => generated 47 bytes in 632 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+*** Starting uWSGI 2.1 (64bit) on [Tue Jun 30 09:08:18 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-11) on 30 June 2015 01:32:39
+os: Linux-2.6.32-358.el6.x86_64 #1 SMP Fri Feb 22 00:31:26 UTC 2013
+nodename: zxp-test-fdfs.tr3
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/FindVM
+detected binary path: /usr/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/FindVM
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30495
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8077 fd 3
+Python version: 2.7.3 (default, Jan  5 2013, 10:09:00)  [GCC 4.4.6 20120305 (Red Hat 4.4.6-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xd6cd20
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+your request buffer size is 4096 bytes
+mapped 291168 bytes (284 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xd6cd20 pid: 1446 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 1446, cores: 1)
+spawned uWSGI worker 2 (pid: 1457, cores: 1)
+spawned uWSGI worker 3 (pid: 1458, cores: 1)
+spawned uWSGI worker 4 (pid: 1459, cores: 1)
+[pid: 1457|app: 0|req: 1/1] 127.0.0.1 () {34 vars in 484 bytes} [Tue Jun 30 01:08:30 2015] GET / => generated 550 bytes in 21 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 1457|app: 0|req: 2/2] 127.0.0.1 () {44 vars in 685 bytes} [Tue Jun 30 01:08:36 2015] POST / => generated 47 bytes in 677 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 1457|app: 0|req: 3/3] 127.0.0.1 () {44 vars in 685 bytes} [Tue Jun 30 01:08:41 2015] POST / => generated 23 bytes in 1007 msecs (HTTP/1.0 200) 2 headers in 88 bytes (1 switches on core 0)

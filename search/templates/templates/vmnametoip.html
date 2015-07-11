@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>VM Name TO IP</title>
+</head>
+<body>
+<div align="center" style="padding-top:20px">
+<form method='post'>
+{{form}}</p>
+{% if MACANDIPANDOS %}
+<table border="1" cellpadding="5">
+    <tr>
+        <td align="center">MAC地址</td>
+        <td align="center">IP地址</td>
+        <td align="center">操作系统</td>
+    </tr>
+{% for MAC,IPANDOS in MACANDIPANDOS.items %}
+    <tr>
+        <td align="center">{{MAC}}</td>
+        <td align="center">{{IPANDOS.0}}</td>
+        <td align="center">{{IPANDOS.1}}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endif %}
+</p>
+<input type="submit" value="ok" >
+</form>
+</div>
+</body>
+</html>
