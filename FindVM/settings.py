@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'FindVM.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vmserver',
-        'USER': 'zhengxupeng',
-        'PASSWORD': 'willron',
-        'HOST':  '192.168.0.219',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST':  '',
         'PORT': '3306',
     }
 }
